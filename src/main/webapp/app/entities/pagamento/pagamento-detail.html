@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="roadApp.pagamento.detail.title">Pagamento</span> {{vm.pagamento.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="roadApp.pagamento.data">Data</span></dt>
+        <dd>
+            <span>{{vm.pagamento.data | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="roadApp.pagamento.baixa">Baixa</span></dt>
+        <dd>
+            <span>{{vm.pagamento.baixa | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="roadApp.pagamento.valor">Valor</span></dt>
+        <dd>
+            <span>{{vm.pagamento.valor}}</span>
+        </dd>
+        <dt><span data-translate="roadApp.pagamento.pessoa">Pessoa</span></dt>
+        <dd>
+            <a ui-sref="pessoa-detail({id:vm.pagamento.pessoaId})">{{vm.pagamento.pessoaNome}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pagamento-detail.edit({id:vm.pagamento.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

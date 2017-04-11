@@ -1,0 +1,28 @@
+{
+    "roadApp": {
+        "pessoa" : {
+            "home": {
+                "title": "Pessoas",
+                "createLabel": "Criar novo Pessoa",
+                "createOrEditLabel": "Criar ou editar Pessoa"
+            },
+            "created": "Um novo Pessoa é criado com o identificador {{ param }}",
+            "updated": "Um Pessoa é atualizado com o identificador {{ param }}",
+            "deleted": "Um Pessoa é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Pessoa {{ id }}?"
+            },
+            "detail": {
+                "title": "Pessoa"
+            },
+            "nome": "Nome",
+            "telefone": "Telefone",
+            "telegram": "Telegram",
+            "registro": "Registro",
+            "sexo": "Sexo",
+            "assento": "Assento",
+            "confirmado": "Confirmado",
+            "quarto": "Quarto"
+        }
+    }
+}

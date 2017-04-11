@@ -1,0 +1,24 @@
+{
+    "roadApp": {
+        "pagamento" : {
+            "home": {
+                "title": "Pagamentos",
+                "createLabel": "Criar novo Pagamento",
+                "createOrEditLabel": "Criar ou editar Pagamento"
+            },
+            "created": "Um novo Pagamento é criado com o identificador {{ param }}",
+            "updated": "Um Pagamento é atualizado com o identificador {{ param }}",
+            "deleted": "Um Pagamento é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Pagamento {{ id }}?"
+            },
+            "detail": {
+                "title": "Pagamento"
+            },
+            "data": "Data",
+            "baixa": "Baixa",
+            "valor": "Valor",
+            "pessoa": "Pessoa"
+        }
+    }
+}

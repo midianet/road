@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="roadApp.pessoa.detail.title">Pessoa</span> {{vm.pessoa.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="roadApp.pessoa.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.pessoa.nome}}</span>
+        </dd>
+        <dt><span data-translate="roadApp.pessoa.telefone">Telefone</span></dt>
+        <dd>
+            <span>{{vm.pessoa.telefone}}</span>
+        </dd>
+        <dt><span data-translate="roadApp.pessoa.telegram">Telegram</span></dt>
+        <dd>
+            <span>{{vm.pessoa.telegram}}</span>
+        </dd>
+        <dt><span data-translate="roadApp.pessoa.registro">Registro</span></dt>
+        <dd>
+            <span>{{vm.pessoa.registro | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="roadApp.pessoa.sexo">Sexo</span></dt>
+        <dd>
+            <span data-translate="{{'roadApp.Sexo.' + vm.pessoa.sexo}}">{{vm.pessoa.sexo}}</span>
+        </dd>
+        <dt><span data-translate="roadApp.pessoa.assento">Assento</span></dt>
+        <dd>
+            <span>{{vm.pessoa.assento}}</span>
+        </dd>
+        <dt><span data-translate="roadApp.pessoa.confirmado">Confirmado</span></dt>
+        <dd>
+            <span>{{vm.pessoa.confirmado}}</span>
+        </dd>
+        <dt><span data-translate="roadApp.pessoa.quarto">Quarto</span></dt>
+        <dd>
+            <a ui-sref="quarto-detail({id:vm.pessoa.quartoId})">{{vm.pessoa.quartoNome}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pessoa-detail.edit({id:vm.pessoa.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

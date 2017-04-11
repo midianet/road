@@ -1,0 +1,23 @@
+{
+    "roadApp": {
+        "quarto" : {
+            "home": {
+                "title": "Quartos",
+                "createLabel": "Create a new Quarto",
+                "createOrEditLabel": "Create or edit a Quarto"
+            },
+            "created": "A new Quarto is created with identifier {{ param }}",
+            "updated": "A Quarto is updated with identifier {{ param }}",
+            "deleted": "A Quarto is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Quarto {{ id }}?"
+            },
+            "detail": {
+                "title": "Quarto"
+            },
+            "nome": "Nome",
+            "classe": "Classe",
+            "quartoTipo": "Quarto Tipo"
+        }
+    }
+}

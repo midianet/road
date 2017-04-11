@@ -1,0 +1,22 @@
+{
+    "roadApp": {
+        "parametro" : {
+            "home": {
+                "title": "Parametros",
+                "createLabel": "Criar novo Parametro",
+                "createOrEditLabel": "Criar ou editar Parametro"
+            },
+            "created": "Um novo Parametro é criado com o identificador {{ param }}",
+            "updated": "Um Parametro é atualizado com o identificador {{ param }}",
+            "deleted": "Um Parametro é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Parametro {{ id }}?"
+            },
+            "detail": {
+                "title": "Parametro"
+            },
+            "chave": "Chave",
+            "valor": "Valor"
+        }
+    }
+}

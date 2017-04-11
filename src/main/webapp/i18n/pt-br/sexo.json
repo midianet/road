@@ -1,0 +1,9 @@
+{
+    "roadApp": {
+        "Sexo" : {
+            "null": "",
+            "FEMININO": "FEMININO",
+            "MASCULINO": "MASCULINO"
+        }
+    }
+}

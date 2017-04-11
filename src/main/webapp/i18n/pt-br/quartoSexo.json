@@ -1,0 +1,10 @@
+{
+    "roadApp": {
+        "QuartoSexo" : {
+            "null": "",
+            "FEMININO": "FEMININO",
+            "MASCULINO": "MASCULINO",
+            "MISTO": "MISTO"
+        }
+    }
+}

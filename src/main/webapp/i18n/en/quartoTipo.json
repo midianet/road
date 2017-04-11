@@ -1,0 +1,22 @@
+{
+    "roadApp": {
+        "quartoTipo" : {
+            "home": {
+                "title": "Quarto Tipos",
+                "createLabel": "Create a new Quarto Tipo",
+                "createOrEditLabel": "Create or edit a Quarto Tipo"
+            },
+            "created": "A new Quarto Tipo is created with identifier {{ param }}",
+            "updated": "A Quarto Tipo is updated with identifier {{ param }}",
+            "deleted": "A Quarto Tipo is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Quarto Tipo {{ id }}?"
+            },
+            "detail": {
+                "title": "Quarto Tipo"
+            },
+            "descricao": "Descricao",
+            "valor": "Valor"
+        }
+    }
+}

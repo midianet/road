@@ -1,0 +1,11 @@
+version: '2'
+services:
+    road-postgresql:
+        image: postgres:9.5.4
+        # volumes:
+        #     - ~/volumes/jhipster/road/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=road
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
