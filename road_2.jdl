@@ -1,0 +1,50 @@
+entity Pessoa{
+  nome String required minlength(5) maxlength(50),
+  telefone String required,
+  telegram Long required,
+  registro LocalDate,
+  sexo Sexo ,
+  assento Integer,
+  confirmado Boolean
+}
+
+enum Sexo{
+   FEMININO, MASCULINO
+}
+
+enum QuartoSexo{
+  FEMININO, MASCULINO, MISTO
+}
+
+entity Quarto{
+   nome String required,	
+   classe QuartoSexo required
+}
+
+entity QuartoTipo{
+   descricao String required minlength(5) maxlength(50),
+   valor BigDecimal required
+}
+
+entity Parametro{
+  chave String required maxlength(10),
+  valor String required maxlength(100) 
+}
+
+entity Pagamento{
+  data LocalDate required,
+  baixa LocalDate,
+  valor BigDecimal required
+}
+
+relationship ManyToOne {
+  Pessoa{quarto(nome)} to Quarto,
+  Quarto{quartoTipo(descricao)} to QuartoTipo,
+  Pagamento{pessoa(nome)} to Pessoa
+}
+
+paginate * with pagination
+
+dto * with mapstruct
+
+service * with serviceClass
