@@ -21,26 +21,18 @@
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="nome"><span data-translate="roadApp.pessoa.nome">Nome</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="telefone"><span data-translate="roadApp.pessoa.telefone">Telefone</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="telegram"><span data-translate="roadApp.pessoa.telegram">Telegram</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="registro"><span data-translate="roadApp.pessoa.registro">Registro</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="sexo"><span data-translate="roadApp.pessoa.sexo">Sexo</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="assento"><span data-translate="roadApp.pessoa.assento">Assento</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="confirmado"><span data-translate="roadApp.pessoa.confirmado">Confirmado</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="confirmado"><span>Conf</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="quartoNome"><span data-translate="roadApp.pessoa.quarto">Quarto</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="pessoa in vm.pessoas track by pessoa.id">
-                    <td><a ui-sref="pessoa-detail({id:pessoa.id})">{{pessoa.id}}</a></td>
-                    <td>{{pessoa.nome}}</td>
-                    <td>{{pessoa.telefone}}</td>
-                    <td>{{pessoa.telegram}}</td>
-                        <td>{{pessoa.registro | date:'mediumDate'}}</td>
-                    <td data-translate="{{'roadApp.Sexo.' + pessoa.sexo}}">{{pessoa.sexo}}</td>
-                    <td>{{pessoa.assento}}</td>
-                    <td>{{pessoa.confirmado}}</td>
-                    <td>
+                    <td style="width:83px;"><a ui-sref="pessoa-detail({id:pessoa.id})">{{pessoa.id}}</a></td>
+                    <td style="width:400px;">{{pessoa.nome}}</td>
+                    <td style="width:90px;">{{pessoa.telefone}}</td>
+                    <td style="width:67px;">{{pessoa.confirmado}}</td>
+                    <td style="width:100px;">
                         <a ui-sref="quarto-detail({id:pessoa.quartoId})">{{pessoa.quartoNome}}</a>
                     </td>
                     <td class="text-right">

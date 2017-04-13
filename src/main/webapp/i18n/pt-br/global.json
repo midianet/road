@@ -8,10 +8,10 @@
             "entities": {
                 "main": "Cadastros",
                 "pagamento": "Pagamentos",
-                "parametro": "Parametros",
+                "parametro": "Parâmetros",
                 "pessoa": "Passageiros",
                 "quarto": "Quartos",
-                "quartoTipo": "Tipos de Quarto",
+                "quartoTipo": "Tipos de quarto",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

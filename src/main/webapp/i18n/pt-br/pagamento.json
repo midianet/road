@@ -6,19 +6,19 @@
                 "createLabel": "Criar novo Pagamento",
                 "createOrEditLabel": "Criar ou editar Pagamento"
             },
-            "created": "Um novo Pagamento é criado com o identificador {{ param }}",
-            "updated": "Um Pagamento é atualizado com o identificador {{ param }}",
-            "deleted": "Um Pagamento é deletado com o identificador {{ param }}",
+            "created": "Um novo Pagamento foi criado com o identificador {{ param }}",
+            "updated": "Um Pagamento foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Pagamento foi deletado com o identificador {{ param }}",
             "delete": {
-                "question": "Tem certeza de que deseja excluir Pagamento {{ id }}?"
+                "question": "Tem certeza de que deseja excluir esse Pagamento {{ id }}?"
             },
             "detail": {
                 "title": "Pagamento"
             },
             "data": "Data",
-            "baixa": "Baixa",
+            "baixa": "Data baixa",
             "valor": "Valor",
-            "pessoa": "Pessoa"
+            "pessoa": "Passageiro"
         }
     }
 }

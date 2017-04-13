@@ -1,4 +1,3 @@
-
 <div>
     <h2><span data-translate="roadApp.pagamento.detail.title">Pagamento</span> {{vm.pagamento.id}}</h2>
     <hr>
@@ -6,15 +5,15 @@
     <dl class="dl-horizontal jh-entity-details">
         <dt><span data-translate="roadApp.pagamento.data">Data</span></dt>
         <dd>
-            <span>{{vm.pagamento.data | date:'mediumDate'}}</span>
+            <span>{{vm.pagamento.data | date:'dd/MM/yyyy'}}</span>
         </dd>
         <dt><span data-translate="roadApp.pagamento.baixa">Baixa</span></dt>
         <dd>
-            <span>{{vm.pagamento.baixa | date:'mediumDate'}}</span>
+            <span>{{vm.pagamento.baixa | date:'dd/MM/yyyy'}}</span>
         </dd>
         <dt><span data-translate="roadApp.pagamento.valor">Valor</span></dt>
         <dd>
-            <span>{{vm.pagamento.valor}}</span>
+            <span>{{vm.pagamento.valor | currency}}</span>
         </dd>
         <dt><span data-translate="roadApp.pagamento.pessoa">Pessoa</span></dt>
         <dd>
@@ -22,9 +21,7 @@
         </dd>
     </dl>
 
-    <button type="submit"
-            ui-sref="{{ vm.previousState }}"
-            class="btn btn-info">
+    <button type="submit" ui-sref="{{ vm.previousState }}" class="btn btn-info">
         <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
     </button>
 

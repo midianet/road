@@ -2,20 +2,20 @@
     "roadApp": {
         "quartoTipo" : {
             "home": {
-                "title": "Quarto Tipos",
-                "createLabel": "Criar novo Quarto Tipo",
-                "createOrEditLabel": "Criar ou editar Quarto Tipo"
+                "title": "Tipo de quarto",
+                "createLabel": "Criar novo Tipo de quarto",
+                "createOrEditLabel": "Criar ou editar Tipo de quarto"
             },
-            "created": "Um novo Quarto Tipo é criado com o identificador {{ param }}",
-            "updated": "Um Quarto Tipo é atualizado com o identificador {{ param }}",
-            "deleted": "Um Quarto Tipo é deletado com o identificador {{ param }}",
+            "created": "Um novo Tipo de quarto foi criado com o identificador {{ param }}",
+            "updated": "Um Tipo de quarto foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Tipo de quaro foi deletado com o identificador {{ param }}",
             "delete": {
-                "question": "Tem certeza de que deseja excluir Quarto Tipo {{ id }}?"
+                "question": "Tem certeza de que deseja excluir esse Tipo de quarto {{ id }}?"
             },
             "detail": {
-                "title": "Quarto Tipo"
+                "title": "Tipo de quarto"
             },
-            "descricao": "Descricao",
+            "descricao": "Descrição",
             "valor": "Valor"
         }
     }

@@ -33,35 +33,35 @@
                     </a>
                     <ul class="dropdown-menu" uib-dropdown-menu>
                         <li ui-sref-active="active">
+                            <a ui-sref="pessoa" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.pessoa">Pessoa</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
                                 <a ui-sref="pagamento" ng-click="vm.collapseNavbar()">
                                     <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                     <span data-translate="global.menu.entities.pagamento">Pagamento</span>
                                 </a>
-                            </li>
-                        <li ui-sref-active="active">
-                                <a ui-sref="parametro" ng-click="vm.collapseNavbar()">
-                                    <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-                                    <span data-translate="global.menu.entities.parametro">Parametro</span>
-                                </a>
-                            </li>
-                        <li ui-sref-active="active">
-                                <a ui-sref="pessoa" ng-click="vm.collapseNavbar()">
-                                    <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
-                                    <span data-translate="global.menu.entities.pessoa">Pessoa</span>
-                                </a>
-                            </li>
+                        </li>
                         <li ui-sref-active="active">
                                 <a ui-sref="quarto" ng-click="vm.collapseNavbar()">
                                     <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                     <span data-translate="global.menu.entities.quarto">Quarto</span>
                                 </a>
-                            </li>
+                        </li>
                         <li ui-sref-active="active">
                                 <a ui-sref="quarto-tipo" ng-click="vm.collapseNavbar()">
                                     <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                     <span data-translate="global.menu.entities.quartoTipo">Quarto Tipo</span>
                                 </a>
-                            </li>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="parametro" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.parametro">Parametro</span>
+                            </a>
+                        </li>
                         <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                     </ul>
                 </li>
@@ -106,12 +106,12 @@
                                 <span data-translate="global.menu.account.login">Sign in</span>
                             </a>
                         </li>
-                        <li ui-sref-active="active" ng-switch-when="false">
-                            <a ui-sref="register" ng-click="vm.collapseNavbar()">
-                                <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
-                                <span data-translate="global.menu.account.register">Register</span>
-                            </a>
-                        </li>
+                        <!--<li ui-sref-active="active" ng-switch-when="false">-->
+                            <!--<a ui-sref="register" ng-click="vm.collapseNavbar()">-->
+                                <!--<span class="glyphicon glyphicon-plus-sign"></span>&nbsp;-->
+                                <!--<span data-translate="global.menu.account.register">Register</span>-->
+                            <!--</a>-->
+                        <!--</li>-->
                     </ul>
                 </li>
                 <li ng-class="{active: vm.$state.includes('admin')}"  ng-switch-when="true" has-authority="ROLE_ADMIN" uib-dropdown class="dropdown pointer">

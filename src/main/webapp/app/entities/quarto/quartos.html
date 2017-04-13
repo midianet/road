@@ -28,28 +28,22 @@
             <tbody>
                 <tr ng-repeat="quarto in vm.quartos track by quarto.id">
                     <td><a ui-sref="quarto-detail({id:quarto.id})">{{quarto.id}}</a></td>
-                    <td>{{quarto.nome}}</td>
+                    <td style="width: 400px;">{{quarto.nome}}</td>
                     <td data-translate="{{'roadApp.QuartoSexo.' + quarto.classe}}">{{quarto.classe}}</td>
                     <td>
                         <a ui-sref="quarto-tipo-detail({id:quarto.quartoTipoId})">{{quarto.quartoTipoDescricao}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
-                            <button type="submit"
-                                    ui-sref="quarto-detail({id:quarto.id})"
-                                    class="btn btn-info btn-sm">
+                            <button type="submit" ui-sref="quarto-detail({id:quarto.id})" class="btn btn-info btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.view"></span>
                             </button>
-                            <button type="submit"
-                                    ui-sref="quarto.edit({id:quarto.id})"
-                                    class="btn btn-primary btn-sm">
+                            <button type="submit" ui-sref="quarto.edit({id:quarto.id})" class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
                             </button>
-                            <button type="submit"
-                                    ui-sref="quarto.delete({id:quarto.id})"
-                                    class="btn btn-danger btn-sm">
+                            <button type="submit" ui-sref="quarto.delete({id:quarto.id})" class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
                             </button>

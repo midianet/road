@@ -28,30 +28,24 @@
             </thead>
             <tbody>
                 <tr ng-repeat="pagamento in vm.pagamentos track by pagamento.id">
-                    <td><a ui-sref="pagamento-detail({id:pagamento.id})">{{pagamento.id}}</a></td>
-                        <td>{{pagamento.data | date:'mediumDate'}}</td>
-                        <td>{{pagamento.baixa | date:'mediumDate'}}</td>
-                    <td>{{pagamento.valor}}</td>
+                    <td style="width:90px;"><a ui-sref="pagamento-detail({id:pagamento.id})">{{pagamento.id}}</a></td>
+                    <td style="width:100px;">{{pagamento.data | date:'dd/MM/yyyy'}}</td>
+                    <td style="width:110px;">{{pagamento.baixa | date:'dd/MM/yyyy'}}</td>
+                    <td style="width:120px;">{{pagamento.valor | currency}}</td>
                     <td>
                         <a ui-sref="pessoa-detail({id:pagamento.pessoaId})">{{pagamento.pessoaNome}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
-                            <button type="submit"
-                                    ui-sref="pagamento-detail({id:pagamento.id})"
-                                    class="btn btn-info btn-sm">
+                            <button type="submit" ui-sref="pagamento-detail({id:pagamento.id})" class="btn btn-info btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.view"></span>
                             </button>
-                            <button type="submit"
-                                    ui-sref="pagamento.edit({id:pagamento.id})"
-                                    class="btn btn-primary btn-sm">
+                            <button type="submit" ui-sref="pagamento.edit({id:pagamento.id})" class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
                             </button>
-                            <button type="submit"
-                                    ui-sref="pagamento.delete({id:pagamento.id})"
-                                    class="btn btn-danger btn-sm">
+                            <button type="submit" ui-sref="pagamento.delete({id:pagamento.id})" class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
                             </button>

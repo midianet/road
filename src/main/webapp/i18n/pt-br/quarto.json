@@ -6,18 +6,18 @@
                 "createLabel": "Criar novo Quarto",
                 "createOrEditLabel": "Criar ou editar Quarto"
             },
-            "created": "Um novo Quarto é criado com o identificador {{ param }}",
-            "updated": "Um Quarto é atualizado com o identificador {{ param }}",
-            "deleted": "Um Quarto é deletado com o identificador {{ param }}",
+            "created": "Um novo Quarto foi criado com o identificador {{ param }}",
+            "updated": "Um Quarto foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Quarto foi deletado com o identificador {{ param }}",
             "delete": {
-                "question": "Tem certeza de que deseja excluir Quarto {{ id }}?"
+                "question": "Tem certeza de que deseja excluir esse Quarto {{ id }}?"
             },
             "detail": {
                 "title": "Quarto"
             },
             "nome": "Nome",
             "classe": "Classe",
-            "quartoTipo": "Quarto Tipo"
+            "quartoTipo": "Tipo de quarto"
         }
     }
 }

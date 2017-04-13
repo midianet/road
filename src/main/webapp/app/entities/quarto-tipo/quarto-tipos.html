@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-4 no-padding-left">
-                <button class="btn btn-primary" ui-sref="quarto-tipo.new" >
+                <button class="btn btn-primary" ui-sref="quarto-tipo.new">
                     <span class="glyphicon glyphicon-plus"></span>
                     <span  data-translate="roadApp.quartoTipo.home.createLabel">
                         Create new Quarto Tipo
@@ -28,24 +28,18 @@
                 <tr ng-repeat="quartoTipo in vm.quartoTipos track by quartoTipo.id">
                     <td><a ui-sref="quarto-tipo-detail({id:quartoTipo.id})">{{quartoTipo.id}}</a></td>
                     <td>{{quartoTipo.descricao}}</td>
-                    <td>{{quartoTipo.valor}}</td>
+                    <td>{{quartoTipo.valor | currency}}</td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
-                            <button type="submit"
-                                    ui-sref="quarto-tipo-detail({id:quartoTipo.id})"
-                                    class="btn btn-info btn-sm">
+                            <button type="submit" ui-sref="quarto-tipo-detail({id:quartoTipo.id})" class="btn btn-info btn-sm">
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.view"></span>
                             </button>
-                            <button type="submit"
-                                    ui-sref="quarto-tipo.edit({id:quartoTipo.id})"
-                                    class="btn btn-primary btn-sm">
+                            <button type="submit" ui-sref="quarto-tipo.edit({id:quartoTipo.id})" class="btn btn-primary btn-sm">
                                 <span class="glyphicon glyphicon-pencil"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
                             </button>
-                            <button type="submit"
-                                    ui-sref="quarto-tipo.delete({id:quartoTipo.id})"
-                                    class="btn btn-danger btn-sm">
+                            <button type="submit" ui-sref="quarto-tipo.delete({id:quartoTipo.id})" class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
                             </button>

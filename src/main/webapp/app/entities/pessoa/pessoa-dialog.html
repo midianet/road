@@ -2,99 +2,75 @@
 <form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
 
     <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
-                ng-click="vm.clear()">&times;</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="vm.clear()">&times;</button>
         <h4 class="modal-title" id="myPessoaLabel" data-translate="roadApp.pessoa.home.createOrEditLabel">Create or edit a Pessoa</h4>
     </div>
     <div class="modal-body">
         <jhi-alert-error></jhi-alert-error>
-        <div class="form-group" ng-show="vm.pessoa.id">
-            <label for="id" data-translate="global.field.id">ID</label>
-            <input type="text" class="form-control" id="id" name="id"
-                    ng-model="vm.pessoa.id" readonly />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="roadApp.pessoa.nome" for="field_nome">Nome</label>
-            <input type="text" class="form-control" name="nome" id="field_nome"
-                    ng-model="vm.pessoa.nome"
-                    required ng-minlength="5" ng-maxlength="50"/>
-            <div ng-show="editForm.nome.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.nome.$error.required" data-translate="entity.validation.required">
-                    This field is required.
-                </p>
-                <p class="help-block"
-                    ng-show="editForm.nome.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="5">
-                    This field is required to be at least 5 characters.
-                </p>
-                <p class="help-block"
-                    ng-show="editForm.nome.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="50">
-                    This field cannot be longer than 50 characters.
-                </p>
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label for="id" data-translate="global.field.id">ID</label>
+                <input type="text" class="form-control" id="id" name="id" ng-model="vm.pessoa.id" readonly />
+            </div>
+            <div class="form-group col-md-10">
+                <label class="control-label" data-translate="roadApp.pessoa.nome" for="field_nome">Nome</label>
+                <input type="text" class="form-control" name="nome" id="field_nome" ng-model="vm.pessoa.nome" required ng-minlength="5" ng-maxlength="50"/>
+                <div ng-show="editForm.nome.$invalid">
+                    <p class="help-block" ng-show="editForm.nome.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                    <p class="help-block" ng-show="editForm.nome.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="5">
+                        This field is required to be at least 5 characters.
+                    </p>
+                    <p class="help-block" ng-show="editForm.nome.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="50">
+                        This field cannot be longer than 50 characters.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="roadApp.pessoa.telefone" for="field_telefone">Telefone</label>
-            <input type="text" class="form-control" name="telefone" id="field_telefone"
-                    ng-model="vm.pessoa.telefone"
-                    required/>
-            <div ng-show="editForm.telefone.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.telefone.$error.required" data-translate="entity.validation.required">
-                    This field is required.
-                </p>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="control-label" data-translate="roadApp.pessoa.telefone" for="field_telefone">Telefone</label>
+                <input type="text" class="form-control" name="telefone" id="field_telefone" ng-model="vm.pessoa.telefone"/>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="roadApp.pessoa.telegram" for="field_telegram">Telegram</label>
-            <input type="number" class="form-control" name="telegram" id="field_telegram"
-                    ng-model="vm.pessoa.telegram"
-                    required/>
-            <div ng-show="editForm.telegram.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.telegram.$error.required" data-translate="entity.validation.required">
-                    This field is required.
-                </p>
-                <p class="help-block"
-                    ng-show="editForm.telegram.$error.number" data-translate="entity.validation.number">
-                    This field should be a number.
-                </p>
+            <div class="form-group col-md-4">
+                <label class="control-label" data-translate="roadApp.pessoa.telegram" for="field_telegram">Telegram</label>
+                <input type="text" class="form-control" name="telegram" id="field_telegram" ng-model="vm.pessoa.telegram" required/>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="roadApp.pessoa.registro" for="field_registro">Registro</label>
+            <div class="form-group col-md-4">
+                <label class="control-label" data-translate="roadApp.pessoa.registro" for="field_registro">Registro</label>
                 <div class="input-group">
-                    <input id="field_registro" type="text" class="form-control" name="registro" uib-datepicker-popup="{{dateformat}}" ng-model="vm.pessoa.registro" is-open="vm.datePickerOpenStatus.registro"
-                    />
+                    <input id="field_registro" type="text" class="form-control" name="registro" uib-datepicker-popup="dd/MM/yyyy" ng-model="vm.pessoa.registro" is-open="vm.datePickerOpenStatus.registro" />
                     <span class="input-group-btn">
                         <button type="button" class="btn btn-default" ng-click="vm.openCalendar('registro')"><i class="glyphicon glyphicon-calendar"></i></button>
                     </span>
                 </div>
+            </div>
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="roadApp.pessoa.sexo" for="field_sexo">Sexo</label>
-            <select class="form-control" name="sexo" ng-model="vm.pessoa.sexo" id="field_sexo">
-                <option value="FEMININO" data-translate="roadApp.Sexo.FEMININO">FEMININO</option>
-                <option value="MASCULINO" data-translate="roadApp.Sexo.MASCULINO">MASCULINO</option>
-            </select>
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label class="control-label" data-translate="roadApp.pessoa.sexo" for="field_sexo">Sexo</label>
+                <select class="form-control" name="sexo" ng-model="vm.pessoa.sexo" id="field_sexo">
+                    <option value="FEMININO" data-translate="roadApp.Sexo.FEMININO">FEMININO</option>
+                    <option value="MASCULINO" data-translate="roadApp.Sexo.MASCULINO">MASCULINO</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label class="control-label" data-translate="roadApp.pessoa.assento" for="field_assento">Assento</label>
+                <input type="number" class="form-control" name="assento" id="field_assento" ng-model="vm.pessoa.assento" />
+            </div>
+            <div class="form-group col-md-8">
+                <label data-translate="roadApp.pessoa.quarto" for="field_quarto">Quarto</label>
+                <select class="form-control" id="field_quarto" name="quarto" ng-model="vm.pessoa.quartoId" ng-options="quarto.id as quarto.nome for quarto in vm.quartos"            >
+                    <option value=""></option>
+                </select>
+            </div>
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="roadApp.pessoa.assento" for="field_assento">Assento</label>
-            <input type="number" class="form-control" name="assento" id="field_assento"
-                    ng-model="vm.pessoa.assento"
-                    />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="roadApp.pessoa.confirmado" for="field_confirmado">Confirmado</label>
-                <input type="checkbox" name="confirmado" id="field_confirmado"
-                          ng-model="vm.pessoa.confirmado"/>
-        </div>
-
-        <div class="form-group">
-            <label data-translate="roadApp.pessoa.quarto" for="field_quarto">Quarto</label>
-            <select class="form-control" id="field_quarto" name="quarto" ng-model="vm.pessoa.quartoId" ng-options="quarto.id as quarto.nome for quarto in vm.quartos"            >
-                <option value=""></option>
-            </select>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label class="control-label" data-translate="roadApp.pessoa.confirmado" for="field_confirmado">Confirmado</label>
+                <input type="checkbox" name="confirmado" id="field_confirmado" ng-model="vm.pessoa.confirmado"/>
+            </div>
         </div>
     </div>
     <div class="modal-footer">

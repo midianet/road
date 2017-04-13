@@ -1,55 +1,45 @@
-
 <form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
-
     <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
-                ng-click="vm.clear()">&times;</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"ng-click="vm.clear()">&times;</button>
         <h4 class="modal-title" id="myQuartoTipoLabel" data-translate="roadApp.quartoTipo.home.createOrEditLabel">Create or edit a Quarto Tipo</h4>
     </div>
     <div class="modal-body">
         <jhi-alert-error></jhi-alert-error>
-        <div class="form-group" ng-show="vm.quartoTipo.id">
-            <label for="id" data-translate="global.field.id">ID</label>
-            <input type="text" class="form-control" id="id" name="id"
-                    ng-model="vm.quartoTipo.id" readonly />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="roadApp.quartoTipo.descricao" for="field_descricao">Descricao</label>
-            <input type="text" class="form-control" name="descricao" id="field_descricao"
-                    ng-model="vm.quartoTipo.descricao"
-                    required ng-minlength="5" ng-maxlength="50"/>
-            <div ng-show="editForm.descricao.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.descricao.$error.required" data-translate="entity.validation.required">
-                    This field is required.
-                </p>
-                <p class="help-block"
-                    ng-show="editForm.descricao.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="5">
-                    This field is required to be at least 5 characters.
-                </p>
-                <p class="help-block"
-                    ng-show="editForm.descricao.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="50">
-                    This field cannot be longer than 50 characters.
-                </p>
+        <div class="row">
+            <div class="form-group col-md-2" ng-show="vm.quartoTipo.id">
+                <label for="id" data-translate="global.field.id">ID</label>
+                <input type="text" class="form-control" id="id" name="id" ng-model="vm.quartoTipo.id" readonly />
             </div>
         </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="roadApp.quartoTipo.valor" for="field_valor">Valor</label>
-            <input type="number" class="form-control" name="valor" id="field_valor"
-                    ng-model="vm.quartoTipo.valor"
-                    required/>
-            <div ng-show="editForm.valor.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.valor.$error.required" data-translate="entity.validation.required">
-                    This field is required.
-                </p>
-                <p class="help-block"
-                    ng-show="editForm.valor.$error.number" data-translate="entity.validation.number">
-                    This field should be a number.
-                </p>
+        <div class="row">
+            <div class="form-group col-md-8">
+                <label class="control-label" data-translate="roadApp.quartoTipo.descricao" for="field_descricao">Descricao</label>
+                <input type="text" class="form-control" name="descricao" id="field_descricao" ng-model="vm.quartoTipo.descricao" required ng-minlength="5" ng-maxlength="50"/>
+                <div ng-show="editForm.descricao.$invalid">
+                    <p class="help-block" ng-show="editForm.descricao.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                    <p class="help-block" ng-show="editForm.descricao.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="5">
+                        This field is required to be at least 5 characters.
+                    </p>
+                    <p class="help-block" ng-show="editForm.descricao.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="50">
+                        This field cannot be longer than 50 characters.
+                    </p>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label class="control-label" data-translate="roadApp.quartoTipo.valor" for="field_valor">Valor</label>
+                <input type="text" class="form-control" name="valor" id="field_valor" ng-model="vm.quartoTipo.valor" ui-money-mask required/>
+                <div ng-show="editForm.valor.$invalid">
+                    <p class="help-block" ng-show="editForm.valor.$error.required" data-translate="entity.validation.required">
+                        This field is required.
+                    </p>
+                    <p class="help-block" ng-show="editForm.valor.$error.number" data-translate="entity.validation.number">
+                        This field should be a number.
+                    </p>
+                </div>
             </div>
         </div>
-
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">

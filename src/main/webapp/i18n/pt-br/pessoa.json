@@ -2,23 +2,23 @@
     "roadApp": {
         "pessoa" : {
             "home": {
-                "title": "Pessoas",
-                "createLabel": "Criar novo Pessoa",
-                "createOrEditLabel": "Criar ou editar Pessoa"
+                "title": "Passageiros",
+                "createLabel": "Criar novo Passageiro",
+                "createOrEditLabel": "Criar ou editar Passageiro"
             },
-            "created": "Um novo Pessoa é criado com o identificador {{ param }}",
-            "updated": "Um Pessoa é atualizado com o identificador {{ param }}",
-            "deleted": "Um Pessoa é deletado com o identificador {{ param }}",
+            "created": "Um novo Passageiro foi criado com o identificador {{ param }}",
+            "updated": "Um novo Passageiro foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Passageiro foi deletado com o identificador {{ param }}",
             "delete": {
-                "question": "Tem certeza de que deseja excluir Pessoa {{ id }}?"
+                "question": "Tem certeza de que deseja excluir o Passageiro {{ id }}?"
             },
             "detail": {
-                "title": "Pessoa"
+                "title": "Passageiro"
             },
             "nome": "Nome",
             "telefone": "Telefone",
             "telegram": "Telegram",
-            "registro": "Registro",
+            "registro": "Data de Cadastro",
             "sexo": "Sexo",
             "assento": "Assento",
             "confirmado": "Confirmado",
