@@ -19,7 +19,6 @@ public class PessoaDTO implements Serializable {
     @Size(min = 5, max = 50)
     private String nome;
 
-    @NotNull
     private String telefone;
 
     @NotNull
