@@ -16,6 +16,7 @@
                 "title": "Parametro"
             },
             "chave": "Chave",
+            "descricao": "Descrição",
             "valor": "Valor"
         }
     }

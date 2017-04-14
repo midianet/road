@@ -25,6 +25,11 @@ public class Parametro implements Serializable {
     private String chave;
 
     @NotNull
+    @Size(max = 20)
+    @Column(name = "descricao", length = 20, nullable = false)
+    private String descricao;
+
+    @NotNull
     @Size(max = 100)
     @Column(name = "valor", length = 100, nullable = false)
     private String valor;
@@ -43,6 +48,19 @@ public class Parametro implements Serializable {
 
     public Parametro chave(String chave) {
         this.chave = chave;
+        return this;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public  Parametro descricao(String descricao){
+        this.descricao = descricao;
         return this;
     }
 
@@ -88,6 +106,7 @@ public class Parametro implements Serializable {
         return "Parametro{" +
             "id=" + id +
             ", chave='" + chave + "'" +
+            ", descricao='" + descricao + "'" +
             ", valor='" + valor + "'" +
             '}';
     }

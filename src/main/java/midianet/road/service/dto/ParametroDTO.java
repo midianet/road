@@ -17,6 +17,10 @@ public class ParametroDTO implements Serializable {
     private String chave;
 
     @NotNull
+    @Size(max = 20)
+    private String descricao;
+
+    @NotNull
     @Size(max = 100)
     private String valor;
 
@@ -27,6 +31,15 @@ public class ParametroDTO implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
     public String getChave() {
         return chave;
     }
@@ -34,6 +47,7 @@ public class ParametroDTO implements Serializable {
     public void setChave(String chave) {
         this.chave = chave;
     }
+
     public String getValor() {
         return valor;
     }
@@ -68,6 +82,7 @@ public class ParametroDTO implements Serializable {
         return "ParametroDTO{" +
             "id=" + id +
             ", chave='" + chave + "'" +
+            ", descricao='" + descricao + "'" +
             ", valor='" + valor + "'" +
             '}';
     }

@@ -20,6 +20,7 @@
                 <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="chave"><span data-translate="roadApp.parametro.chave">Chave</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="decricao"><span data-translate="roadApp.parametro.descricao">Descrição</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="valor"><span data-translate="roadApp.parametro.valor">Valor</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
@@ -28,6 +29,7 @@
                 <tr ng-repeat="parametro in vm.parametros track by parametro.id">
                     <td><a ui-sref="parametro-detail({id:parametro.id})">{{parametro.id}}</a></td>
                     <td>{{parametro.chave}}</td>
+                    <td>{{parametro.descricao}}</td>
                     <td>{{parametro.valor | currency}}</td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">

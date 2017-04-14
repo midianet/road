@@ -14,5 +14,6 @@
     <include file="classpath:config/liquibase/changelog/20170411230924_added_entity_constraints_Pagamento.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170411230924_added_entity_constraints_Pessoa.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170411230924_added_entity_constraints_Quarto.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170514102020_alter_entity_Parametro_add_column_descricao.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

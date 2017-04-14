@@ -30,7 +30,7 @@
                 <tr ng-repeat="pessoa in vm.pessoas track by pessoa.id">
                     <td style="width:83px;"><a ui-sref="pessoa-detail({id:pessoa.id})">{{pessoa.id}}</a></td>
                     <td style="width:400px;">{{pessoa.nome}}</td>
-                    <td style="width:90px;">{{pessoa.telefone}}</td>
+                    <td style="width:100px;">{{pessoa.telefone}}</td>
                     <td style="width:67px;">{{pessoa.confirmado}}</td>
                     <td style="width:100px;">
                         <a ui-sref="quarto-detail({id:pessoa.quartoId})">{{pessoa.quartoNome}}</a>
