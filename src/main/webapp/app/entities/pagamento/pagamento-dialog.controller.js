@@ -5,9 +5,9 @@
         .module('roadApp')
         .controller('PagamentoDialogController', PagamentoDialogController);
 
-    PagamentoDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Pagamento', 'Pessoa'];
+    PagamentoDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Pagamento', 'PessoaList'];
 
-    function PagamentoDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Pagamento, Pessoa) {
+    function PagamentoDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Pagamento, PessoaList) {
         var vm = this;
 
         vm.pagamento = entity;
@@ -15,7 +15,7 @@
         vm.datePickerOpenStatus = {};
         vm.openCalendar = openCalendar;
         vm.save = save;
-        vm.pessoas = Pessoa.query();
+        vm.pessoas = PessoaList.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

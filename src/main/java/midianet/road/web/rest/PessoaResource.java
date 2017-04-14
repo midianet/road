@@ -34,7 +34,7 @@ public class PessoaResource {
     private final Logger log = LoggerFactory.getLogger(PessoaResource.class);
 
     private static final String ENTITY_NAME = "pessoa";
-        
+
     private final PessoaService pessoaService;
 
     public PessoaResource(PessoaService pessoaService) {
@@ -81,6 +81,19 @@ public class PessoaResource {
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, pessoaDTO.getId().toString()))
             .body(result);
+    }
+
+    /**
+     * GET  /pessoas : get all the pessoas.
+     *
+     * @return the ResponseEntity with status 200 (OK) and the list of pessoas in body
+     */
+    @GetMapping("/pessoas/list")
+    @Timed
+    public ResponseEntity<List<PessoaDTO>> listAllPessoas() {
+        log.debug("REST request all Pessoas");
+        List<PessoaDTO> page = pessoaService.listAll();
+        return new ResponseEntity<>(page,HttpStatus.OK);
     }
 
     /**

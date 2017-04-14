@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +24,7 @@ import java.util.stream.Collectors;
 public class PessoaService {
 
     private final Logger log = LoggerFactory.getLogger(PessoaService.class);
-    
+
     private final PessoaRepository pessoaRepository;
 
     private final PessoaMapper pessoaMapper;
@@ -49,7 +50,7 @@ public class PessoaService {
 
     /**
      *  Get all the pessoas.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
@@ -59,6 +60,19 @@ public class PessoaService {
         Page<Pessoa> result = pessoaRepository.findAll(pageable);
         return result.map(pessoa -> pessoaMapper.pessoaToPessoaDTO(pessoa));
     }
+
+    /**
+     *  Get all the pessoas.
+     *
+     *  @return the list of entities
+     */
+    @Transactional(readOnly = true)
+    public List<PessoaDTO> listAll() {
+        log.debug("Request to list all Pessoas");
+        List<Pessoa> result = pessoaRepository.findAll(new Sort("nome"));
+        return result.stream().map(pessoa -> pessoaMapper.pessoaToPessoaDTO(pessoa)).collect(Collectors.toList());
+    }
+
 
     /**
      *  Get one pessoa by id.
