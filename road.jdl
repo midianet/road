@@ -1,6 +1,6 @@
 entity Pessoa{
   nome String required minlength(5) maxlength(50),
-  telefone String required,
+  telefone String maxlength(20),
   telegram Long required,
   registro LocalDate,
   sexo Sexo ,
